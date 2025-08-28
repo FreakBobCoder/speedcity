@@ -1,127 +1,224 @@
-<div class="trail-card godly">
-  <img src="https://speed-city.fandom.com/wiki/File:Deleted_Trail.png" alt="Deleted Trail">
-  <h3>Deleted Trail</h3>
-  <p>Value: 15</p>
-  <p>Rarity: Godly</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speed City Values</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 1.5rem;
+      text-align: center;
+      border-bottom: 2px solid #00d4ff;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #00d4ff;
+    }
+    .controls {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 1rem;
+    }
+    .controls input, .controls select {
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 1rem;
+    }
+    .card {
+      background: #1a1a1a;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .trail-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #00d4ff;
+    }
+    .value {
+      font-size: 1rem;
+      margin-top: 5px;
+    }
+    .rarity {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+    .godly { background: #ff3d3d; }
+    .mythic { background: #9f1aff; }
+    .epic { background: #ff9f1a; }
+    .rare { background: #3dff7d; }
+    .low { background: #aaaaaa; }
+  </style>
+</head>
+<body>
 
-<div class="trail-card godly">
-  <img src="https://speed-city.fandom.com/wiki/File:Catching_Snowflakes_Trail.png" alt="Catching Snowflakes">
-  <h3>Catching Snowflakes</h3>
-  <p>Value: 12</p>
-  <p>Rarity: Godly</p>
-</div>
+  <header>
+    <h1>⚡ Speed City Value List ⚡</h1>
+  </header>
 
-<div class="trail-card godly">
-  <img src="https://speed-city.fandom.com/wiki/File:Gift_Trail.png" alt="Gift">
-  <h3>Gift</h3>
-  <p>Value: 10</p>
-  <p>Rarity: Godly</p>
-</div>
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search trails...">
+    <select id="sort">
+      <option value="default">Sort By</option>
+      <option value="valueDesc">Value (High → Low)</option>
+      <option value="valueAsc">Value (Low → High)</option>
+      <option value="name">Name (A → Z)</option>
+    </select>
+  </div>
 
-<div class="trail-card mythic">
-  <img src="https://speed-city.fandom.com/wiki/File:Fancy_Snowman_Trail.png" alt="Fancy Snowman">
-  <h3>Fancy Snowman</h3>
-  <p>Value: 9.5</p>
-  <p>Rarity: Mythic</p>
-</div>
+  <div class="grid" id="trailGrid">
+    <div class="card" data-value="15" data-name="Deleted Trail">
+      <div class="trail-name">Deleted Trail</div>
+      <div class="value">Value: 15</div>
+      <div class="rarity godly">Godly</div>
+    </div>
+    <div class="card" data-value="12" data-name="Catching Snowflakes">
+      <div class="trail-name">Catching Snowflakes</div>
+      <div class="value">Value: 12</div>
+      <div class="rarity godly">Godly</div>
+    </div>
+    <div class="card" data-value="10" data-name="Gift">
+      <div class="trail-name">Gift</div>
+      <div class="value">Value: 10</div>
+      <div class="rarity godly">Godly</div>
+    </div>
+    <div class="card" data-value="9.5" data-name="Fancy Snowman">
+      <div class="trail-name">Fancy Snowman</div>
+      <div class="value">Value: 9.5</div>
+      <div class="rarity mythic">Mythic</div>
+    </div>
+    <div class="card" data-value="8.5" data-name="Gingerbread Man">
+      <div class="trail-name">Gingerbread Man</div>
+      <div class="value">Value: 8.5</div>
+      <div class="rarity mythic">Mythic</div>
+    </div>
+    <div class="card" data-value="7.5" data-name="Bells">
+      <div class="trail-name">Bells</div>
+      <div class="value">Value: 7.5</div>
+      <div class="rarity mythic">Mythic</div>
+    </div>
+    <div class="card" data-value="7" data-name="Golden Shiny Teeth">
+      <div class="trail-name">Golden Shiny Teeth</div>
+      <div class="value">Value: 7.0</div>
+      <div class="rarity mythic">Mythic</div>
+    </div>
+    <div class="card" data-value="6.5" data-name="Snowflake">
+      <div class="trail-name">Snowflake</div>
+      <div class="value">Value: 6.5</div>
+      <div class="rarity epic">Epic</div>
+    </div>
+    <div class="card" data-value="5.5" data-name="Rainbow">
+      <div class="trail-name">Rainbow</div>
+      <div class="value">Value: 5.5</div>
+      <div class="rarity epic">Epic</div>
+    </div>
+    <div class="card" data-value="5" data-name="Legendary Crate">
+      <div class="trail-name">Legendary Crate</div>
+      <div class="value">Value: 5.0</div>
+      <div class="rarity epic">Epic</div>
+    </div>
+    <div class="card" data-value="4.5" data-name="2020">
+      <div class="trail-name">2020</div>
+      <div class="value">Value: 4.5</div>
+      <div class="rarity epic">Epic</div>
+    </div>
+    <div class="card" data-value="4.5" data-name="Wreath">
+      <div class="trail-name">Wreath</div>
+      <div class="value">Value: 4.5</div>
+      <div class="rarity epic">Epic</div>
+    </div>
+    <div class="card" data-value="3" data-name="Palm Tree">
+      <div class="trail-name">Palm Tree</div>
+      <div class="value">Value: 3.0</div>
+      <div class="rarity rare">Rare</div>
+    </div>
+    <div class="card" data-value="2.5" data-name="Flame">
+      <div class="trail-name">Flame</div>
+      <div class="value">Value: 2.5</div>
+      <div class="rarity rare">Rare</div>
+    </div>
+    <div class="card" data-value="2" data-name="Frozen Pumpkin">
+      <div class="trail-name">Frozen Pumpkin</div>
+      <div class="value">Value: 2.0</div>
+      <div class="rarity low">Low</div>
+    </div>
+    <div class="card" data-value="2" data-name="Dark Pumpkin">
+      <div class="trail-name">Dark Pumpkin</div>
+      <div class="value">Value: 2.0</div>
+      <div class="rarity low">Low</div>
+    </div>
+    <div class="card" data-value="2" data-name="Unstable">
+      <div class="trail-name">Unstable</div>
+      <div class="value">Value: 2.0</div>
+      <div class="rarity low">Low</div>
+    </div>
+    <div class="card" data-value="0.5" data-name="UFO">
+      <div class="trail-name">UFO</div>
+      <div class="value">Value: 0.5</div>
+      <div class="rarity low">Low</div>
+    </div>
+  </div>
 
-<div class="trail-card mythic">
-  <img src="https://speed-city.fandom.com/wiki/File:Gingerbread_Man_Trail.png" alt="Gingerbread Man">
-  <h3>Gingerbread Man</h3>
-  <p>Value: 8.5</p>
-  <p>Rarity: Mythic</p>
-</div>
+  <script>
+    const searchInput = document.getElementById("search");
+    const sortSelect = document.getElementById("sort");
+    const grid = document.getElementById("trailGrid");
 
-<div class="trail-card mythic">
-  <img src="https://speed-city.fandom.com/wiki/File:Bells_Trail.png" alt="Bells">
-  <h3>Bells</h3>
-  <p>Value: 7.5</p>
-  <p>Rarity: Mythic</p>
-</div>
+    // Search
+    searchInput.addEventListener("keyup", () => {
+      const filter = searchInput.value.toLowerCase();
+      const cards = grid.querySelectorAll(".card");
 
-<div class="trail-card epic">
-  <img src="https://speed-city.fandom.com/wiki/File:Golden_Shiny_Teeth_Trail.png" alt="Golden Shiny Teeth">
-  <h3>Golden Shiny Teeth</h3>
-  <p>Value: 7.0</p>
-  <p>Rarity: Epic</p>
-</div>
+      cards.forEach(card => {
+        const name = card.dataset.name.toLowerCase();
+        card.style.display = name.includes(filter) ? "block" : "none";
+      });
+    });
 
-<div class="trail-card epic">
-  <img src="https://speed-city.fandom.com/wiki/File:Snowflake_Trail.png" alt="Snowflake">
-  <h3>Snowflake</h3>
-  <p>Value: 6.5</p>
-  <p>Rarity: Epic</p>
-</div>
+    // Sorting
+    sortSelect.addEventListener("change", () => {
+      let cards = Array.from(grid.querySelectorAll(".card"));
+      let value = sortSelect.value;
 
-<div class="trail-card epic">
-  <img src="https://speed-city.fandom.com/wiki/File:Rainbow_Trail.png" alt="Rainbow">
-  <h3>Rainbow</h3>
-  <p>Value: 5.5</p>
-  <p>Rarity: Epic</p>
-</div>
+      if (value === "valueDesc") {
+        cards.sort((a, b) => b.dataset.value - a.dataset.value);
+      } else if (value === "valueAsc") {
+        cards.sort((a, b) => a.dataset.value - b.dataset.value);
+      } else if (value === "name") {
+        cards.sort((a, b) => a.dataset.name.localeCompare(b.dataset.name));
+      }
 
-<div class="trail-card epic">
-  <img src="https://speed-city.fandom.com/wiki/File:Legendary_Crate_Trail.png" alt="Legendary Crate">
-  <h3>Legendary Crate</h3>
-  <p>Value: 5.0</p>
-  <p>Rarity: Epic</p>
-</div>
+      cards.forEach(card => grid.appendChild(card));
+    });
+  </script>
 
-<div class="trail-card epic">
-  <img src="https://speed-city.fandom.com/wiki/File:2020_Trail.png" alt="2020">
-  <h3>2020</h3>
-  <p>Value: 4.5</p>
-  <p>Rarity: Epic</p>
-</div>
-
-<div class="trail-card epic">
-  <img src="https://speed-city.fandom.com/wiki/File:Wreath_Trail.png" alt="Wreath">
-  <h3>Wreath</h3>
-  <p>Value: 4.5</p>
-  <p>Rarity: Epic</p>
-</div>
-
-<div class="trail-card rare">
-  <img src="https://speed-city.fandom.com/wiki/File:Palm_Tree_Trail.png" alt="Palm Tree">
-  <h3>Palm Tree</h3>
-  <p>Value: 3.0</p>
-  <p>Rarity: Rare</p>
-</div>
-
-<div class="trail-card rare">
-  <img src="https://speed-city.fandom.com/wiki/File:Flame_Trail.png" alt="Flame">
-  <h3>Flame</h3>
-  <p>Value: 2.5</p>
-  <p>Rarity: Rare</p>
-</div>
-
-<div class="trail-card rare">
-  <img src="https://speed-city.fandom.com/wiki/File:Frozen_Pumpkin_Trail.png" alt="Frozen Pumpkin">
-  <h3>Frozen Pumpkin</h3>
-  <p>Value: 2.0</p>
-  <p>Rarity: Rare</p>
-</div>
-
-<div class="trail-card rare">
-  <img src="https://speed-city.fandom.com/wiki/File:Dark_Pumpkin_Trail.png" alt="Dark Pumpkin">
-  <h3>Dark Pumpkin</h3>
-  <p>Value: 2.0</p>
-  <p>Rarity: Rare</p>
-</div>
-
-<div class="trail-card rare">
-  <img src="https://speed-city.fandom.com/wiki/File:Unstable_Trail.png" alt="Unstable">
-  <h3>Unstable</h3>
-  <p>Value: 2.0</p>
-  <p>Rarity: Rare</p>
-</div>
-
-<div class="trail-card low">
-  <img src="https://speed-city.fandom.com/wiki/File:UFO_Trail.png" alt="UFO">
-  <h3>UFO</h3>
-  <p>Value: 0.5</p>
-  <p>Rarity: Low</p>
-</div>
+</body>
+</html>
 
 
