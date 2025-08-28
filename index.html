@@ -69,10 +69,11 @@
       font-size: 0.85rem;
       font-weight: bold;
     }
-    .legendary { background: #ff3d3d; }
-    .rare { background: #ff9f1a; }
-    .epic { background: #9f1aff; }
-    .common { background: #3dff7d; }
+    .godly { background: #ff3d3d; }
+    .mythic { background: #9f1aff; }
+    .epic { background: #ff9f1a; }
+    .rare { background: #3dff7d; }
+    .low { background: #aaaaaa; }
   </style>
 </head>
 <body>
@@ -92,53 +93,96 @@
   </div>
 
   <div class="grid" id="trailGrid">
-    <!-- Example cards -->
     <div class="card" data-value="15" data-name="Deleted Trail">
       <div class="trail-name">Deleted Trail</div>
       <div class="value">Value: 15</div>
-      <div class="rarity legendary">Legendary</div>
+      <div class="rarity godly">Godly</div>
     </div>
     <div class="card" data-value="12" data-name="Catching Snowflakes">
       <div class="trail-name">Catching Snowflakes</div>
       <div class="value">Value: 12</div>
-      <div class="rarity epic">Epic</div>
+      <div class="rarity godly">Godly</div>
     </div>
     <div class="card" data-value="10" data-name="Gift">
       <div class="trail-name">Gift</div>
       <div class="value">Value: 10</div>
-      <div class="rarity epic">Epic</div>
+      <div class="rarity godly">Godly</div>
     </div>
     <div class="card" data-value="9.5" data-name="Fancy Snowman">
       <div class="trail-name">Fancy Snowman</div>
       <div class="value">Value: 9.5</div>
-      <div class="rarity epic">Epic</div>
+      <div class="rarity mythic">Mythic</div>
     </div>
     <div class="card" data-value="8.5" data-name="Gingerbread Man">
       <div class="trail-name">Gingerbread Man</div>
       <div class="value">Value: 8.5</div>
-      <div class="rarity rare">Rare</div>
+      <div class="rarity mythic">Mythic</div>
     </div>
     <div class="card" data-value="7.5" data-name="Bells">
       <div class="trail-name">Bells</div>
       <div class="value">Value: 7.5</div>
-      <div class="rarity rare">Rare</div>
+      <div class="rarity mythic">Mythic</div>
     </div>
     <div class="card" data-value="7" data-name="Golden Shiny Teeth">
       <div class="trail-name">Golden Shiny Teeth</div>
       <div class="value">Value: 7.0</div>
-      <div class="rarity rare">Rare</div>
+      <div class="rarity mythic">Mythic</div>
     </div>
     <div class="card" data-value="6.5" data-name="Snowflake">
       <div class="trail-name">Snowflake</div>
       <div class="value">Value: 6.5</div>
-      <div class="rarity common">Common</div>
+      <div class="rarity epic">Epic</div>
     </div>
     <div class="card" data-value="5.5" data-name="Rainbow">
       <div class="trail-name">Rainbow</div>
       <div class="value">Value: 5.5</div>
-      <div class="rarity common">Common</div>
+      <div class="rarity epic">Epic</div>
     </div>
-    <!-- Add more cards here for other trails -->
+    <div class="card" data-value="5" data-name="Legendary Crate">
+      <div class="trail-name">Legendary Crate</div>
+      <div class="value">Value: 5.0</div>
+      <div class="rarity epic">Epic</div>
+    </div>
+    <div class="card" data-value="4.5" data-name="2020">
+      <div class="trail-name">2020</div>
+      <div class="value">Value: 4.5</div>
+      <div class="rarity epic">Epic</div>
+    </div>
+    <div class="card" data-value="4.5" data-name="Wreath">
+      <div class="trail-name">Wreath</div>
+      <div class="value">Value: 4.5</div>
+      <div class="rarity epic">Epic</div>
+    </div>
+    <div class="card" data-value="3" data-name="Palm Tree">
+      <div class="trail-name">Palm Tree</div>
+      <div class="value">Value: 3.0</div>
+      <div class="rarity rare">Rare</div>
+    </div>
+    <div class="card" data-value="2.5" data-name="Flame">
+      <div class="trail-name">Flame</div>
+      <div class="value">Value: 2.5</div>
+      <div class="rarity rare">Rare</div>
+    </div>
+    <div class="card" data-value="2" data-name="Frozen Pumpkin">
+      <div class="trail-name">Frozen Pumpkin</div>
+      <div class="value">Value: 2.0</div>
+      <div class="rarity low">Low</div>
+    </div>
+    <div class="card" data-value="2" data-name="Dark Pumpkin">
+      <div class="trail-name">Dark Pumpkin</div>
+      <div class="value">Value: 2.0</div>
+      <div class="rarity low">Low</div>
+    </div>
+    <div class="card" data-value="2" data-name="Unstable">
+      <div class="trail-name">Unstable</div>
+      <div class="value">Value: 2.0</div>
+      <div class="rarity low">Low</div>
+    </div>
+    <div class="card" data-value="0.5" data-name="UFO">
+      <div class="trail-name">UFO</div>
+      <div class="value">Value: 0.5</div>
+      <div class="rarity low">Low</div>
+    </div>
   </div>
 
   <script>
@@ -176,3 +220,4 @@
 
 </body>
 </html>
+
