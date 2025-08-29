@@ -48,8 +48,8 @@
 
   .card {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    flex-direction: column;
+    gap: 10px;
     padding: 1rem;
     border-radius: 15px;
     background: #1e1e1e;
@@ -60,18 +60,6 @@
   .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.7);
-  }
-
-  .card img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    border-radius: 8px;
-    flex-shrink: 0;
-  }
-
-  .card-info {
-    flex: 1;
   }
 
   .trail-name {
@@ -118,136 +106,114 @@
 
 <div class="grid" id="trailGrid">
 
-  <!-- Gift Trail with image -->
-  <div class="card" data-value="10" data-name="Gift">
-    <img src="https://static.wikia.nocookie.net/speed-city/images/f/fc/2011E8EC-D24A-4B17-A33B-A6E77BCCBB87.png/revision/latest?cb=20191221161217" alt="Gift Trail">
-    <div class="card-info">
-      <p class="trail-name">Gift</p>
-      <p class="value">Value: 10</p>
-      <span class="rarity godly">Godly</span>
-    </div>
+  <div class="card" data-value="15" data-name="Deleted Trail">
+    <p class="trail-name">Deleted Trail</p>
+    <p class="value">Value: 15</p>
+    <span class="rarity godly">Godly</span>
   </div>
 
-  <!-- Other trails -->
-  <div class="card" data-value="15" data-name="Deleted Trail">
-    <div class="card-info">
-      <p class="trail-name">Deleted Trail</p>
-      <p class="value">Value: 15</p>
-      <span class="rarity godly">Godly</span>
-    </div>
-  </div>
   <div class="card" data-value="12" data-name="Catching Snowflakes">
-    <div class="card-info">
-      <p class="trail-name">Catching Snowflakes</p>
-      <p class="value">Value: 12</p>
-      <span class="rarity godly">Godly</span>
-    </div>
+    <p class="trail-name">Catching Snowflakes</p>
+    <p class="value">Value: 12</p>
+    <span class="rarity godly">Godly</span>
   </div>
+
+  <div class="card" data-value="10" data-name="Gift">
+    <p class="trail-name">Gift</p>
+    <p class="value">Value: 10</p>
+    <span class="rarity godly">Godly</span>
+  </div>
+
   <div class="card" data-value="9.5" data-name="Fancy Snowman">
-    <div class="card-info">
-      <p class="trail-name">Fancy Snowman</p>
-      <p class="value">Value: 9.5</p>
-      <span class="rarity mythic">Mythic</span>
-    </div>
+    <p class="trail-name">Fancy Snowman</p>
+    <p class="value">Value: 9.5</p>
+    <span class="rarity mythic">Mythic</span>
   </div>
+
   <div class="card" data-value="8.5" data-name="Gingerbread Man">
-    <div class="card-info">
-      <p class="trail-name">Gingerbread Man</p>
-      <p class="value">Value: 8.5</p>
-      <span class="rarity mythic">Mythic</span>
-    </div>
+    <p class="trail-name">Gingerbread Man</p>
+    <p class="value">Value: 8.5</p>
+    <span class="rarity mythic">Mythic</span>
   </div>
+
   <div class="card" data-value="7.5" data-name="Bells">
-    <div class="card-info">
-      <p class="trail-name">Bells</p>
-      <p class="value">Value: 7.5</p>
-      <span class="rarity mythic">Mythic</span>
-    </div>
+    <p class="trail-name">Bells</p>
+    <p class="value">Value: 7.5</p>
+    <span class="rarity mythic">Mythic</span>
   </div>
+
   <div class="card" data-value="7" data-name="Golden Shiny Teeth">
-    <div class="card-info">
-      <p class="trail-name">Golden Shiny Teeth</p>
-      <p class="value">Value: 7.0</p>
-      <span class="rarity mythic">Mythic</span>
-    </div>
+    <p class="trail-name">Golden Shiny Teeth</p>
+    <p class="value">Value: 7.0</p>
+    <span class="rarity mythic">Mythic</span>
   </div>
+
   <div class="card" data-value="6.5" data-name="Snowflake">
-    <div class="card-info">
-      <p class="trail-name">Snowflake</p>
-      <p class="value">Value: 6.5</p>
-      <span class="rarity epic">Epic</span>
-    </div>
+    <p class="trail-name">Snowflake</p>
+    <p class="value">Value: 6.5</p>
+    <span class="rarity epic">Epic</span>
   </div>
+
   <div class="card" data-value="5.5" data-name="Rainbow">
-    <div class="card-info">
-      <p class="trail-name">Rainbow</p>
-      <p class="value">Value: 5.5</p>
-      <span class="rarity epic">Epic</span>
-    </div>
+    <p class="trail-name">Rainbow</p>
+    <p class="value">Value: 5.5</p>
+    <span class="rarity epic">Epic</span>
   </div>
+
   <div class="card" data-value="5" data-name="Legendary Crate">
-    <div class="card-info">
-      <p class="trail-name">Legendary Crate</p>
-      <p class="value">Value: 5.0</p>
-      <span class="rarity epic">Epic</span>
-    </div>
+    <p class="trail-name">Legendary Crate</p>
+    <p class="value">Value: 5.0</p>
+    <span class="rarity epic">Epic</span>
   </div>
+
   <div class="card" data-value="4.5" data-name="2020">
-    <div class="card-info">
-      <p class="trail-name">2020</p>
-      <p class="value">Value: 4.5</p>
-      <span class="rarity epic">Epic</span>
-    </div>
+    <p class="trail-name">2020</p>
+    <p class="value">Value: 4.5</p>
+    <span class="rarity epic">Epic</span>
   </div>
+
   <div class="card" data-value="4.5" data-name="Wreath">
-    <div class="card-info">
-      <p class="trail-name">Wreath</p>
-      <p class="value">Value: 4.5</p>
-      <span class="rarity epic">Epic</span>
-    </div>
+    <p class="trail-name">Wreath</p>
+    <p class="value">Value: 4.5</p>
+    <span class="rarity epic">Epic</span>
   </div>
+
   <div class="card" data-value="3" data-name="Palm Tree">
-    <div class="card-info">
-      <p class="trail-name">Palm Tree</p>
-      <p class="value">Value: 3.0</p>
-      <span class="rarity rare">Rare</span>
-    </div>
+    <p class="trail-name">Palm Tree</p>
+    <p class="value">Value: 3.0</p>
+    <span class="rarity rare">Rare</span>
   </div>
+
   <div class="card" data-value="2.5" data-name="Flame">
-    <div class="card-info">
-      <p class="trail-name">Flame</p>
-      <p class="value">Value: 2.5</p>
-      <span class="rarity rare">Rare</span>
-    </div>
+    <p class="trail-name">Flame</p>
+    <p class="value">Value: 2.5</p>
+    <span class="rarity rare">Rare</span>
   </div>
+
   <div class="card" data-value="2" data-name="Frozen Pumpkin">
-    <div class="card-info">
-      <p class="trail-name">Frozen Pumpkin</p>
-      <p class="value">Value: 2.0</p>
-      <span class="rarity low">Low</span>
-    </div>
+    <p class="trail-name">Frozen Pumpkin</p>
+    <p class="value">Value: 2.0</p>
+    <span class="rarity low">Low</span>
   </div>
+
   <div class="card" data-value="2" data-name="Dark Pumpkin">
-    <div class="card-info">
-      <p class="trail-name">Dark Pumpkin</p>
-      <p class="value">Value: 2.0</p>
-      <span class="rarity low">Low</span>
-    </div>
+    <p class="trail-name">Dark Pumpkin</p>
+    <p class="value">Value: 2.0</p>
+    <span class="rarity low">Low</span>
   </div>
+
   <div class="card" data-value="2" data-name="Unstable">
-    <div class="card-info">
-      <p class="trail-name">Unstable</p>
-      <p class="value">Value: 2.0</p>
-      <span class="rarity low">Low</span>
-    </div>
+    <p class="trail-name">Unstable</p>
+    <p class="value">Value: 2.0</p>
+    <span class="rarity low">Low</span>
   </div>
+
   <div class="card" data-value="0.5" data-name="UFO">
-    <div class="card-info">
-      <p class="trail-name">UFO</p>
-      <p class="value">Value: 0.5</p>
-      <span class="rarity low">Low</span>
-    </div>
+    <p class="trail-name">UFO</p>
+    <p class="value">Value: 0.5</p>
+    <span class="rarity low">Low</span>
   </div>
+
 </div>
 
 <script>
@@ -280,6 +246,7 @@ sortSelect.addEventListener("change", () => {
 
 </body>
 </html>
+
 
 
 
